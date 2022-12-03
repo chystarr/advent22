@@ -1,5 +1,4 @@
 # Advent of Code Day 2
-
 # Part 1
 
 points = {
@@ -26,7 +25,7 @@ for line in f:
     # Add points depending on the outcome of the round
     # 0 for a loss; 3 for a draw; 6 for a win
     # win
-    if (player == "X" and opponent == "C") or points[player] - 1 == points[opponent] :
+    if (player == "X" and opponent == "C") or points[player] - 1 == points[opponent]:
         score += 6
     # draw
     elif points[player] == points[opponent]:
@@ -36,3 +35,4 @@ for line in f:
 f.close()
 
 print(total_score)
+
