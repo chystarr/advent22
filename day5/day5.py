@@ -23,13 +23,9 @@ def main():
             # stacks[target].append(crate)
         
         # Part 2
-        print(stacks[source])
-        print(stacks[target])
         crates = stacks[source][len(stacks[source])-amount:]
         del stacks[source][len(stacks[source])-amount:]
         stacks[target].extend(crates)
-        print(stacks[source])
-        print(stacks[target])
         
     file.close()
 
