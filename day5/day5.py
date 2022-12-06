@@ -1,5 +1,4 @@
 # Advent of Code 2022 Day 5
-# Part 1
 
 def main():
     stacks = {
@@ -18,9 +17,20 @@ def main():
     for line in file:
         words = line.strip().split()
         amount, source, target = int(words[1]), int(words[3]), int(words[5])
-        for i in range(amount):
-            crate = stacks[source].pop()
-            stacks[target].append(crate)
+        # Part 1
+        # for i in range(amount):
+            # crate = stacks[source].pop()
+            # stacks[target].append(crate)
+        
+        # Part 2
+        print(stacks[source])
+        print(stacks[target])
+        crates = stacks[source][len(stacks[source])-amount:]
+        del stacks[source][len(stacks[source])-amount:]
+        stacks[target].extend(crates)
+        print(stacks[source])
+        print(stacks[target])
+        
     file.close()
 
     arrangement = ''
