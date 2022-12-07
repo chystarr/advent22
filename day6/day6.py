@@ -10,8 +10,10 @@ def chars_processed(datastream):
             charset.add(c)
         return True
 
-    chars = list(datastream[:3])
-    for i in range(3, len(datastream)):
+    # chars = list(datastream[:3])
+    chars = list(datastream[:13])
+    # for i in range(3, len(datastream)):
+    for i in range(13, len(datastream)):
         chars.append(datastream[i])
         if all_unique(chars):
             return i + 1
